@@ -26,7 +26,7 @@ namespace :solr do
           rescue Exception => e
             puts "No pid is running"
           end
-          execute "rm -rf #{current_path}/solr"
+          # execute "rm -rf #{current_path}/solr"
         end
       end
      execute "ps -ef | grep solr | grep -v grep | awk '{print $2}' | xargs kill || echo 'no process with name solr found'"
